@@ -77,7 +77,13 @@ body {
 
 @media screen and (max-width:550px) {
   .note {
-      max-width: 45vw;
+      min-width: 27vw;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .inpNewNote {
+      width:40vw;
   }
 }
 
