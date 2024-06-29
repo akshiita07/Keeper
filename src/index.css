@@ -1,13 +1,162 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background: #eee;
+  font-family: "Playwrite NG Modern", cursive;
+  /* height: 100vh; */
+  min-height: 100vh;
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.heading {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #f5ba13;
+  height: 15vh;
+  width: 100%;
+  font-family: "Playwrite NG Modern", cursive;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  height: 2rem;
+}
+
+.content {
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.note {
+  background-color: white;
+  width: auto;
+  max-width: 22vw;
+  min-width: 15vw;
+  /* max-height: 80vh; */
+  height: auto;
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.noteTitle {
+  margin: 0;
+  font-size: 1em;
+  margin-bottom: 6px;
+  font-family: "Playwrite ES", cursive;
+  border-bottom: dashed 0.5px #ccc;
+}
+
+.noteContent {
+  margin: 0;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "Lora", serif;
+}
+
+@media screen and (max-width:680px) {
+  .note {
+      max-width: 25vw;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .note {
+      max-width: 35vw;
+  }
+}
+
+/* add new note div */
+.inpNewNote{
+  background-color: white;
+  width: 25vw;
+  margin: 20px auto;
+  min-height: 30vh;
+  max-height: 35vh;
+  border-radius: 10px;
+  position: relative;
+}
+
+.titleInp{
+  margin: 10px;
+  padding: 10px;
+  width: 88%;
+  min-height: 10vh;
+  outline: none;
+  border: none;
+  border-bottom: dashed 0.5px #ccc;
+  position: relative;
+  box-sizing: border-box;
+
+}
+
+.textInp{
+  margin: 10px;
+  padding: 10px;
+  width: 88%;
+  min-height: 10vh;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+
+}
+
+.titleInp::placeholder,.textInp::placeholder{
+  color: #ccc;
+  font-family: "Playwrite ES", cursive;
+  position: relative;
+}
+
+
+.addBtn{
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color:#f5ba13 ;
+  position: absolute;
+  bottom: -20px;
+  right: 0px;
+  font-family: "Playwrite NG Modern", cursive;
+  font-size: 0.7rem;
+}
+
+.deleteBtn{
+  padding: 10px;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: "Playwrite NG Modern", cursive;
+  font-size: 0.7rem;
+  color: #f5ba13;
+  background-color: white;
+  text-decoration: none;
+}
+
+
+.addBtn:hover{
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 5px 0.5px black;
+}
+
+.deleteBtn:hover{
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
 }
